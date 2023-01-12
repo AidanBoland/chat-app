@@ -1,0 +1,114 @@
+$textColour: #ffffff;
+
+$accent: #7373ff;
+$accentHover: #afafff;
+
+$backgroundGray: rgba(58, 58, 58, 0.4);
+
+$textboxGray: rgba(17, 17, 17, 0.4);
+$textboxGrayHover: rgba(75, 75, 75, 0.4);
+
+$backgroundPurple: #4f024d;
+$backgroundOrange: #844419;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+/*-------------------RESET-------------------*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    background: none;
+    border: none;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/*-------------------RESET-------------------*/
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(243.18deg, $backgroundOrange 40%, $backgroundPurple 100%);
+
+    font-family: 'Open Sans', sans-serif;
+    color: $textColour;
+}
+
+.mainContainer {
+    width: 60%;
+    height: 100%;
+    margin-left: 20%;
+    margin-right: 20%;
+    position: relative;
+}
+
+.messageScroller {
+    overflow-y: scroll;
+    height: 80%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.contentBox {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    padding: 1rem;
+    height: fit-content;
+    margin-top: 2rem;
+    background: $backgroundGray;
+    border-radius: clamp(0.5rem, 1.5rem, 3rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 1rem;
+}
+
+.typeBox {
+    position: absolute;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    padding: 1rem;
+    height: fit-content;
+    margin-top: 2rem;
+    background: $backgroundGray;
+    border-top-left-radius: clamp(0.5rem, 1.5rem, 3rem);
+    border-top-right-radius: clamp(0.5rem, 1.5rem, 3rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 1rem;
+    bottom: 0px;
+}
+
+.profilePicture {
+    padding: 2.5rem;
+    width: 0px;
+    height: 0px;
+    border-radius: clamp(0.25rem, 1rem, 3rem);
+    background-color: white;
+}
+
+h1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
