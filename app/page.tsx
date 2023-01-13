@@ -4,17 +4,21 @@ import { useSession, signIn, signOut } from 'next-auth/react';
 import Link from 'next/link';
 import SignOut from '../components/logOut';
 import SignIn from '../components/SignIn';
-import '../styles/home.scss';
 
 export default function HomePage() {
     const { data: session } = useSession();
     if (session) {
         return (
-            <>
-                <h1>Signed in as {session.user?.email}</h1> <br />
-                <SignOut />
-                <Link href={'/message'}>lol</Link>
-            </>
+            <div className="infoContainer">
+                <div className="infoSubContainer">
+                    <h2>Retar.Chat</h2>
+                    <h1>Thank you for Signing In!</h1>
+                    <Link href="/message" className="button">
+                        Continue to Chat
+                    </Link>
+                    <SignOut />
+                </div>
+            </div>
         );
     }
 

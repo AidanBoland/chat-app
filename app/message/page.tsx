@@ -1,10 +1,9 @@
 'use client';
 
 import SignOut from '../../components/logOut';
-import { unstable_getServerSession } from 'next-auth/next';
-import { authOptions } from '../../pages/api/auth/[...nextauth]';
 import { useSession } from 'next-auth/react';
 import SignIn from '../../components/SignIn';
+import '../../styles/message.scss';
 
 export default function MessagePage() {
     const { data: session } = useSession();
@@ -85,15 +84,114 @@ export default function MessagePage() {
                             </div>
                         </div>
                     </li>
+                    <li>
+                        <div className="contentBox">
+                            <div className="profilePicture" />
+                            <div>
+                                <h1>testUsername</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet ullamco et tempor ullamco laborum cillum duis tempor. Lorem Lorem eu quis proident quis pariatur
+                                    est culpa ipsum eiusmod nisi. Incididunt aliquip dolore nostrud labore laboris eiusmod nisi esse aliquip.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="contentBox">
+                            <div className="profilePicture" />
+                            <div>
+                                <h1>testUsername</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet ullamco et tempor ullamco laborum cillum duis tempor. Lorem Lorem eu quis proident quis pariatur
+                                    est culpa ipsum eiusmod nisi. Incididunt aliquip dolore nostrud labore laboris eiusmod nisi esse aliquip.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="contentBox">
+                            <div className="profilePicture" />
+                            <div>
+                                <h1>testUsername</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet ullamco et tempor ullamco laborum cillum duis tempor. Lorem Lorem eu quis proident quis pariatur
+                                    est culpa ipsum eiusmod nisi. Incididunt aliquip dolore nostrud labore laboris eiusmod nisi esse aliquip.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="contentBox">
+                            <div className="profilePicture" />
+                            <div>
+                                <h1>testUsername</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet ullamco et tempor ullamco laborum cillum duis tempor. Lorem Lorem eu quis proident quis pariatur
+                                    est culpa ipsum eiusmod nisi. Incididunt aliquip dolore nostrud labore laboris eiusmod nisi esse aliquip.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="contentBox">
+                            <div className="profilePicture" />
+                            <div>
+                                <h1>testUsername</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet ullamco et tempor ullamco laborum cillum duis tempor. Lorem Lorem eu quis proident quis pariatur
+                                    est culpa ipsum eiusmod nisi. Incididunt aliquip dolore nostrud labore laboris eiusmod nisi esse aliquip.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="contentBox">
+                            <div className="profilePicture" />
+                            <div>
+                                <h1>testUsername</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet ullamco et tempor ullamco laborum cillum duis tempor. Lorem Lorem eu quis proident quis pariatur
+                                    est culpa ipsum eiusmod nisi. Incididunt aliquip dolore nostrud labore laboris eiusmod nisi esse aliquip.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="contentBox">
+                            <div className="profilePicture" />
+                            <div>
+                                <h1>testUsername</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet ullamco et tempor ullamco laborum cillum duis tempor. Lorem Lorem eu quis proident quis pariatur
+                                    est culpa ipsum eiusmod nisi. Incididunt aliquip dolore nostrud labore laboris eiusmod nisi esse aliquip.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="contentBox">
+                            <div className="profilePicture" />
+                            <div>
+                                <h1>testUsername</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet ullamco et tempor ullamco laborum cillum duis tempor. Lorem Lorem eu quis proident quis pariatur
+                                    est culpa ipsum eiusmod nisi. Incididunt aliquip dolore nostrud labore laboris eiusmod nisi esse aliquip.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </>
         );
     }
 
     return (
-        <>
-            <h1>Log in to view the message board</h1>
-            <SignIn />
-        </>
+        <div className="infoContainer">
+            <div className="infoSubContainer">
+                <h2>Retar.Chat</h2>
+                <h1>Please sign in to access the chat</h1>
+                <SignIn />
+            </div>
+        </div>
     );
 }
