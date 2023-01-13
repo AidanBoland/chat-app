@@ -2,7 +2,7 @@ import { signIn } from 'next-auth/react';
 
 export default function SignIn() {
     return (
-        <button onClick={() => signIn()} className="signInOutButton">
+        <button onClick={() => signIn()} className="button">
             Sign in
         </button>
     );
