@@ -20,7 +20,7 @@ export default function HomePage() {
 
     return (
         <div className="infoContainer">
-            <div>
+            <div className="infoSubContainer">
                 <h2>Retar.Chat</h2>
                 <h1>Please sign in to access the chat</h1>
                 <SignIn />

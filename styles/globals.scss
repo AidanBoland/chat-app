@@ -40,6 +40,22 @@ video {
 
 /*-------------------RESET-------------------*/
 
+@media screen and (max-width: 800px) {
+    :root {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    :root {
+        font-size: 8px;
+    }
+    .infoSubContainer {
+        width: 60vw;
+        height: 60vw;
+    }
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -111,4 +127,22 @@ body {
 h1 {
     font-size: 1.25rem;
     font-weight: 600;
+}
+
+.signInOutButton {
+    background-color: $accent;
+    color: $textColour;
+    width: max-content;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    font-weight: 800;
+
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: $accentHover;
+    }
 }
