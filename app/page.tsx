@@ -4,6 +4,7 @@ import { useSession, signIn, signOut } from 'next-auth/react';
 import Link from 'next/link';
 import SignOut from '../components/logOut';
 import SignIn from '../components/SignIn';
+import '../styles/home.scss';
 
 export default function HomePage() {
     const { data: session } = useSession();
@@ -18,9 +19,12 @@ export default function HomePage() {
     }
 
     return (
-        <>
-            <h1>Not signed in</h1> <br />
-            <SignIn />
-        </>
+        <div className="infoContainer">
+            <div>
+                <h2>Retar.Chat</h2>
+                <h1>Please sign in to access the chat</h1>
+                <SignIn />
+            </div>
+        </div>
     );
 }
