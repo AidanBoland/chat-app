@@ -2,6 +2,8 @@
 
 import { useSession, signIn, signOut } from 'next-auth/react';
 import Link from 'next/link';
+import SignOut from '../components/logOut';
+import SignIn from '../components/SignIn';
 
 export default function HomePage() {
     const { data: session } = useSession();
@@ -9,8 +11,8 @@ export default function HomePage() {
         return (
             <>
                 <h1>Signed in as {session.user?.email}</h1> <br />
-                <button onClick={() => signOut()}>Sign out</button>
-                <Link href={'/messagePage'}>lol</Link>
+                <SignOut />
+                <Link href={'/message'}>lol</Link>
             </>
         );
     }
@@ -18,7 +20,7 @@ export default function HomePage() {
     return (
         <>
             <h1>Not signed in</h1> <br />
-            <button onClick={() => signIn()}>Sign in</button>
+            <SignIn />
         </>
     );
 }
