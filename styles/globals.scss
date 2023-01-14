@@ -108,7 +108,7 @@ h1 {
     .infoSubContainer {
         background: $backgroundGray;
         border-radius: clamp(0.5rem, 1.5rem, 3rem);
-        width: 100%;
+        width: max-content;
         height: max-content;
         display: flex;
         flex-direction: column;

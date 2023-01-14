@@ -12,7 +12,7 @@ export default function HomePage() {
         return (
             <div className="infoContainer">
                 <div className="infoSubContainer">
-                    <h2>Retar.Chat</h2>
+                    <h2>REEBAR.CHAT</h2>
                     <h1>Thank you for Signing In!</h1>
                     <Link href="/message" className="button">
                         Continue to Chat
