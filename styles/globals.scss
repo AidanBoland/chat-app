@@ -57,6 +57,7 @@ video {
 }
 
 body {
+    display: inline-block;
     width: 100vw;
     height: 100vh;
     background: linear-gradient(243.18deg, $backgroundOrange 40%, $backgroundPurple 100%);
@@ -66,6 +67,7 @@ body {
 }
 
 .mainContainer {
+    display: inline-block;
     width: 60%;
     height: 100%;
     margin-left: 20%;

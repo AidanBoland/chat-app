@@ -1,9 +1,10 @@
 'use client';
 
-import { useSession, signIn, signOut } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
 import Link from 'next/link';
-import SignOut from '../components/logOut';
+import SignOut from '../components/signOut';
 import SignIn from '../components/SignIn';
+import NeedToSignIn from '../components/singInScreen';
 
 export default function HomePage() {
     const { data: session } = useSession();
@@ -22,13 +23,5 @@ export default function HomePage() {
         );
     }
 
-    return (
-        <div className="infoContainer">
-            <div className="infoSubContainer">
-                <h2>Retar.Chat</h2>
-                <h1>Please sign in to access the chat</h1>
-                <SignIn />
-            </div>
-        </div>
-    );
+    return <NeedToSignIn />;
 }

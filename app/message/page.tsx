@@ -1,8 +1,8 @@
 'use client';
 
-import SignOut from '../../components/logOut';
+import SignOut from '../../components/signOut';
 import { useSession } from 'next-auth/react';
-import SignIn from '../../components/SignIn';
+import NeedToSignIn from '../../components/singInScreen';
 import '../../styles/message.scss';
 
 export default function MessagePage() {
@@ -11,7 +11,10 @@ export default function MessagePage() {
     if (session) {
         return (
             <>
-                <SignOut />
+                <div className="messagePageSignOut">
+                    <SignOut />
+                </div>
+
                 <ul className="messageScroller">
                     <li>
                         <div className="contentBox">
@@ -185,13 +188,5 @@ export default function MessagePage() {
         );
     }
 
-    return (
-        <div className="infoContainer">
-            <div className="infoSubContainer">
-                <h2>Retar.Chat</h2>
-                <h1>Please sign in to access the chat</h1>
-                <SignIn />
-            </div>
-        </div>
-    );
+    return <NeedToSignIn />;
 }
