@@ -1,11 +1,14 @@
-chat-app
+# rebar.chat frontend
 
-basic chat website
+next.js based frontend for my basic browser chat app rebar.chat
 
-next.js (typescript)
+## tech:
+- next.js (typescript)
 
-nextauth.js
+- nextauth.js
 
-socket.io
+- apollo
 
-sqlite
+- graphql
+
+- sass/scss
