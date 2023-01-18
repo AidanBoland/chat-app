@@ -31,9 +31,14 @@
     gap: 1rem;
     div {
         min-width: 1px;
+
         p {
             width: 100%;
             word-wrap: break-word;
+        }
+
+        &.contentWrapper {
+            width: calc(100% - 7rem);
         }
     }
 }
@@ -62,4 +67,23 @@
     height: 0px;
     border-radius: clamp(0.25rem, 1rem, 3rem);
     background-color: white;
+}
+
+.messageHeader {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    h1 {
+        font-weight: 700;
+    }
+
+    div {
+        flex-grow: 1;
+    }
+
+    .messageIdDisplay {
+        color: rgba($color: #ffffff, $alpha: 0.2);
+        width: min-content;
+    }
 }
