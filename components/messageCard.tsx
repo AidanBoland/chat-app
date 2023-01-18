@@ -3,7 +3,7 @@ interface messageCardProps {
     userDisplayColour: string;
     messageId: string;
     messageContent: string;
-    messageListKey: number;
+    key: number;
 }
 
 export default function MessageCard(props: messageCardProps) {
