@@ -1,4 +1,4 @@
-import SignIn from './SignIn';
+import SignIn from './signIn';
 
 export default function NeedToSignIn() {
     return (
@@ -6,7 +6,8 @@ export default function NeedToSignIn() {
             <div className="infoSubContainer">
                 <h2>REBAR.CHAT</h2>
                 <h1>Please sign in to access the chat</h1>
-                <SignIn />
+                <SignIn provider="github" />
+                <SignIn provider="discord" />
             </div>
         </div>
     );

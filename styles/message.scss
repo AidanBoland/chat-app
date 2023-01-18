@@ -25,10 +25,17 @@
     margin-top: 2rem;
     background: $backgroundGray;
     border-radius: clamp(0.5rem, 1.5rem, 3rem);
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     justify-content: left;
     gap: 1rem;
+    div {
+        min-width: 1px;
+        p {
+            width: 100%;
+            word-wrap: break-word;
+        }
+    }
 }
 
 .typeBox {
