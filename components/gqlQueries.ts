@@ -3,6 +3,7 @@ import { gql } from '@apollo/client';
 export const getMessageQuery = gql`
     query {
         getMessages {
+            id
             content
             sender {
                 displayName

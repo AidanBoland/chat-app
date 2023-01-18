@@ -33,7 +33,21 @@ export default function MessagePage() {
                 </div>
             );
         }
-        console.log(data);
+
+        let messageArray = data.getMessages;
+
+        let messageElements: any = [];
+        for (let i = messageArray.length - 1; i >= 0; i--) {
+            messageElements.push(
+                <MessageCard
+                    userDisplayName={`${messageArray[i].sender.displayName}`}
+                    userDisplayColour={`${messageArray[i].sender.displayColour}`}
+                    messageId={`${messageArray[i].id}`}
+                    messageContent={`${messageArray[i].content}`}
+                    key={i}
+                />
+            );
+        }
 
         return (
             <>
@@ -41,9 +55,7 @@ export default function MessagePage() {
                     <SignOut />
                 </div>
 
-                <ul className="messageScroller">
-                    <MessageCard userDisplayName="test123" userDisplayColour="000000" messageId="4" messageContent="test456" />
-                </ul>
+                <ul className="messageScroller">{messageElements}</ul>
             </>
         );
     }

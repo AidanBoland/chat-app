@@ -1,8 +1,9 @@
 interface messageCardProps {
-    userDisplayName: String;
-    userDisplayColour: String;
-    messageId: String;
-    messageContent: String;
+    userDisplayName: string;
+    userDisplayColour: string;
+    messageId: string;
+    messageContent: string;
+    messageListKey: number;
 }
 
 export default function MessageCard(props: messageCardProps) {
