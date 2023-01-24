@@ -1,8 +1,8 @@
-SELECT * FROM Users;
+SELECT * FROM User;
 
 -- @block
 
-SELECT * FROM Messages;
+SELECT * FROM Message;
 
 -- @block
 

@@ -22,3 +22,17 @@ export const postMessageQuery = gql`
         }
     }
 `;
+
+export const messageSubscriptionQuery = gql`
+    subscription newMessage {
+        newMessage {
+            __typename
+            id
+            content
+            sender {
+                displayColour
+                displayName
+            }
+        }
+    }
+`;
