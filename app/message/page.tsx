@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import { getMessageQuery, postMessageQuery, messageSubscriptionQuery } from '../../components/gqlQueries';
 import SignOut from '../../components/signOut';
 import SignInScreen from '../../components/singInScreen';
+import TypeBox from '../../components/typeBox';
 import '../../styles/message.scss';
 
 export default function MessagePage() {
@@ -86,6 +87,8 @@ export default function MessagePage() {
                             </li>
                         ))}
                 </ul>
+
+                <TypeBox />
             </>
         );
     }
