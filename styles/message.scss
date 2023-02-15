@@ -1,11 +1,13 @@
 @import './globals.scss';
 
+//specific to the signout button on the message page, it needed a slightly adjusted margin to line up with everything else
 .messagePageSignOut {
     margin-left: 2.5%;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
+//the main scrolling div containing all the messages
 .messageScroller {
     overflow-y: scroll;
     height: 80%;
@@ -16,6 +18,7 @@
     }
 }
 
+//the grey background on all the messages
 .contentBox {
     width: 95%;
     margin-left: 2.5%;
@@ -43,6 +46,7 @@
     }
 }
 
+//the box at the bottom of the screen for typing messages
 .typeBox {
     position: absolute;
     width: 95%;
@@ -54,13 +58,57 @@
     background: $backgroundGray;
     border-top-left-radius: 2.5vmin;
     border-top-right-radius: 2.5vmin;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    gap: 1rem;
+    display: inline-grid;
+    gap: 1.5rem;
     bottom: 0px;
+
+    span {
+        background-color: $textboxGray;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 1.5vmin;
+        grid-column-start: 1;
+        grid-column-end: 9;
+        color: $textColour;
+        transition: background-color 0.15s ease-in;
+        height: max-content;
+
+        &:empty::before {
+            color: #aaaaaa;
+            content: 'Type a message...';
+        }
+
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &:focus {
+            outline: none;
+            background-color: $textboxGrayHover;
+        }
+
+        &:hover {
+            background-color: $textboxGrayHover;
+        }
+    }
+
+    input[type='reset'] {
+        grid-column-start: 9;
+        grid-column-end: 10;
+        width: min-content;
+    }
+
+    button {
+        grid-column-start: 10;
+        grid-column-end: 10;
+    }
 }
 
+//a profile picture placeholder
 .profilePicture {
     padding: 2.5rem;
     width: 0px;
@@ -69,6 +117,7 @@
     background-color: white;
 }
 
+//the top of the message boxes containing the display name, user id, and message id
 .messageHeader {
     display: flex;
     flex-direction: row;
@@ -88,7 +137,14 @@
     }
 }
 
+//the bottom div that gets autscrolled to
 .scrollTo {
     height: 0rem;
     margin-top: 10rem;
+}
+
+//the send message button
+.sendButton {
+    aspect-ratio: 1 / 1;
+    height: fit-content;
 }

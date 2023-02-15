@@ -9,6 +9,7 @@ import { split, HttpLink } from '@apollo/client';
 import { getMainDefinition } from '@apollo/client/utilities';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+    //taken from documentation, setting up apollo client
     const httpLink = new HttpLink({
         uri: 'http://localhost:4000/gql/api',
     });
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <head />
             <body>
                 <SessionProvider>
+                    {/*nexauth wrapper*/}
                     <ApolloProvider client={client}>
                         <div className='mainContainer'>{children}</div>
                     </ApolloProvider>
