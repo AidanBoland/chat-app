@@ -53,3 +53,14 @@ export const getUserQuery = gql`
         }
     }
 `;
+
+export const createUserQuery = gql`
+    mutation createUser($email: String!, $displayName: String!, $displayColour: String!) {
+        createUser(email: $email, displayName: $displayName, displayColour: $displayColour) {
+            id
+            email
+            displayName
+            displayColour
+        }
+    }
+`;

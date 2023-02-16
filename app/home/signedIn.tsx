@@ -37,9 +37,9 @@ export default function SignedIn(session: any) {
                     <h2>REBAR.CHAT</h2>
                     <h1>Thank you for Signing In!</h1>
                     <p>
-                        Signed in as:<span style={{ color: `#${data.displayColour}` }}></span>
+                        Signed in as: <span style={{ color: `#${data.checkForUser.displayColour}` }}>{data.checkForUser.displayName}</span>
                     </p>
-                    <input></input>
+                    <span />
                     <Link href='/message' className='button' style={{ margin: 'auto' }}>
                         Continue to Chat
                     </Link>
@@ -56,5 +56,5 @@ export default function SignedIn(session: any) {
     //i dont want to jus display their email or real name so they need a displayname
     //id will be displayed on every message, becuase the displayname will be changeable to i want to prevent immitation of others
     //i also plan to make peoples ids mentionable, so a message mentioning them will be highlighted on their screen
-    return <UserCreation />;
+    return <UserCreation session={session.session} />;
 }
