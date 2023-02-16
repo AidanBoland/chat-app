@@ -154,3 +154,37 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+
+//styling for the user creation form
+.userCreateForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+    width: 80%;
+    margin: auto;
+
+    input[type='text'] {
+        width: 100%;
+        background-color: $textboxGray;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 1.5vmin;
+        grid-column-start: 1;
+        grid-column-end: 9;
+        color: $textColour;
+        transition: background-color 0.15s ease-in;
+        height: max-content;
+
+        &:hover {
+            background-color: $textboxGrayHover;
+        }
+        &:focus {
+            outline: none;
+            background-color: $textboxGrayHover;
+        }
+    }
+}
